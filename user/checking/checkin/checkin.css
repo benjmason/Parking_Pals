@@ -37,11 +37,11 @@ body {
     align-items: center;
 }
 
-.login-form-field::placeholder {
+.checkin-form-field::placeholder {
   color: #3a3a3a;
 }
 
-.login-form-field {
+.checkin-form-field {
   border: none;
   border-bottom: 1px solid #3a3a3a;
   margin-bottom: 10px;
