@@ -19,12 +19,12 @@
       <input type="text" name="name" id="name-field" class="signup-form-field" placeholder="Name">
       <input type="text" name="username" id="username-field" class="signup-form-field" placeholder="Username">
       <input type="password" name="password" id="password-field" class="signup-form-field" placeholder="Password">
-      <input type="submit" value="Register" id="signup-form-submit">
+      <button type="submit">Create account</button>
     </form>
   
   </main>
   <script type="module">
-    document.querySelector('#signup-form')?.addEventListener('signup-form-submit', async (e) => {
+    document.querySelector('#signup-form')?.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = document.querySelector('#name-field').value.trim();
       const email = document.querySelector('#username-field').value.trim();
