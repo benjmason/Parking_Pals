@@ -24,7 +24,7 @@
   
   </main>
   <script type="module">
-    document.querySelector('#signup-form')?.addEventListener('submit', async (e) => {
+    document.querySelector('#signup-form')?.addEventListener('signup-form-submit', async (e) => {
       e.preventDefault();
       const name = document.querySelector('#name-field').value.trim();
       const email = document.querySelector('#username-field').value.trim();
