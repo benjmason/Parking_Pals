@@ -2,7 +2,7 @@
 const signupForm = document.getElementById("signup-form");
 const signupButton = document.getElementById("signup-form-submit");
 const signupErrorMsg = document.getElementById("signup-error-msg");
-
+/*
 signupButton.addEventListener("click", (e) => {
     e.preventDefault();
     const username = signupForm.username.value;
@@ -12,3 +12,4 @@ signupButton.addEventListener("click", (e) => {
     window.location.href = "../user/dashboard/dashboard.html"
     
 })
+    */
