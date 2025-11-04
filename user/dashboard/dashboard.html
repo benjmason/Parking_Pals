@@ -7,10 +7,6 @@
   <title>Logout</title>
   <link rel="stylesheet" href="./dashboard2.css">
   <script defer src="./dashboard.js"></script>
-  <script type="module">
-    const { data: { session } } = await supabase.auth.getSession();
-    if (!session) location.href = 'login/login.html';
-  </script>
 </head>
 
 <body>
