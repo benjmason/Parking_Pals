@@ -8,6 +8,7 @@
   
   <link rel="stylesheet" href="./login.css">
   <script defer src="./login.js"></script>
+  <script type="module" src="js/supabase-client.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,23 @@
     </form>
   
   </main>
+  <script type="module">
+    // Already logged in? Skip to dashboard.
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (session) location.href = 'user/dashboard.html';
+    });
+
+    document.querySelector('#login-form')?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.querySelector('#username-field').value.trim();
+      const password = document.querySelector('#password-field').value;
+
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) return alert(error.message || 'Login failed');
+
+      location.href = 'user/dashboard.html';
+    });
+  </script>
 </body>
 
 </html>
